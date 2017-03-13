@@ -123,17 +123,42 @@ PRODUCT_PACKAGES += \
     CMSettingsProvider \
     CMUpdater \
     LineageSetupWizard \
-    Eleven \
-    ExactCalculator \
     LiveLockScreenService \
-    LockClock \
-    Trebuchet \
-    WallpaperPicker \
     WeatherProvider
 
 # Exchange support
 PRODUCT_PACKAGES += \
     Exchange2
+
+# OpenGApps
+GAPPS_VARIANT := nano
+GAPPS_FORCE_PIXEL_LAUNCHER := true
+GAPPS_FORCE_WEBVIEW_OVERRIDES := true
+GAPPS_FORCE_DIALER_OVERRIDES := true
+GAPPS_FORCE_MMS_OVERRIDES := true
+PRODUCT_PACKAGES += \
+	DMAgent \
+	LatinImeGoogle \
+	Maps \
+	CameraGoogle \
+	DialerGoogle \
+	Messenger \
+	PrintServiceGoogle \
+	VRService \
+	WebViewGoogle \
+	PixelIcons \
+	PixelLauncher \
+	Wallpapers \
+	StorageManagerGoogle \
+	ContactsGoogle \
+	CloudPrint \
+	Chrome \
+	Speech \
+	Hotword \
+	ExchangeGoogle \
+	Search
+
+$(call inherit-product, vendor/google/build/opengapps-packages.mk)
 
 # Extra tools in CM
 PRODUCT_PACKAGES += \
