@@ -92,6 +92,11 @@ ifneq ($(TARGET_DISABLE_CMSDK), true)
 include vendor/cm/config/cmsdk_common.mk
 endif
 
+# TWRP
+ifeq ($(WITH_TWRP),true)
+include vendor/cm/config/twrp.mk
+endif
+
 # Bootanimation
 PRODUCT_PACKAGES += \
     bootanimation.zip
@@ -122,7 +127,6 @@ PRODUCT_PACKAGES += \
     AudioFX \
     CMSettingsProvider \
     CMUpdater \
-    CustomTiles \
     LineageSetupWizard \
     LiveLockScreenService \
     WeatherProvider
