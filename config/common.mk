@@ -121,7 +121,7 @@ PRODUCT_PACKAGES += \
     CMSettingsProvider \
     LineageSetupWizard \
     LiveLockScreenService \
-    Updater \
+    CMUpdater \
     WeatherProvider
 
 # Exchange support
