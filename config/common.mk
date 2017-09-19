@@ -119,7 +119,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AudioFX \
     CMSettingsProvider \
-    LineageSetupWizard \
     LiveLockScreenService \
     CMUpdater \
     WeatherProvider
@@ -150,7 +149,6 @@ PRODUCT_PACKAGES += \
 	StorageManagerGoogle \
 	ContactsGoogle \
 	CloudPrint \
-	Chrome \
 	Speech \
 	Hotword \
 	ExchangeGoogle \
