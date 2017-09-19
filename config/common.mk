@@ -129,32 +129,71 @@ PRODUCT_PACKAGES += \
 
 # OpenGApps
 GAPPS_VARIANT := nano
+GAPPS_FORCE_PACKAGE_OVERRIDES := true
 GAPPS_FORCE_PIXEL_LAUNCHER := true
 GAPPS_FORCE_WEBVIEW_OVERRIDES := true
 GAPPS_FORCE_DIALER_OVERRIDES := true
 GAPPS_FORCE_MMS_OVERRIDES := true
 PRODUCT_PACKAGES += \
+    CalculatorGoogle \
+    CalendarGooglePrebuilt \
+    CloudPrint2 \
 	DMAgent \
-	LatinImeGoogle \
-	Maps \
-	CameraGoogle \
-	DialerGoogle \
-	Messenger \
-	PrintServiceGoogle \
-	VRService \
-	WebViewGoogle \
-	PixelIcons \
-	PixelLauncher \
-	Wallpapers \
-	StorageManagerGoogle \
-	ContactsGoogle \
-	CloudPrint \
-	Speech \
-	Hotword \
-	ExchangeGoogle \
-	Search
+    Drive \
+    EditorsDocs \
+    EditorsSheets \
+    EditorsSlides \
+    FitnessPrebuilt \
+    GCS \
+    GoogleBackupTransport \
+    GoogleCalendarSyncAdapter \
+    GoogleCamera \
+    GoogleContacts \
+    GoogleContactsSyncAdapter \
+    GoogleDialer \
+    GoogleExtServices \
+    GoogleExtShared \
+    GoogleFeedback \
+    GoogleHome \
+    GoogleJapaneseInput \
+    GoogleLoginService \
+    GoogleOneTimeInitializer \
+    GooglePackageInstaller \
+    GooglePartnerSetup \
+    GooglePrintRecommentationService \
+    GoogleServicesFramework \
+    GoogleVrCore \
+    Hangouts \
+    LatinImeGoogle \
+    Maps \
+    Music2 \
+    Newsstand \
+    Phonesky \
+    Photos \
+    PixelLauncher \
+    PixelLauncherIcons \
+    PlayGames \
+    PrebuiltBugle \
+    PrebuiltDeskClockGoogle \
+    PrebuiltExchange3Google \
+    PrebuiltGmail \
+    PrebuiltGmsCore \
+    PrebuiltGmsCoreInstantApps \
+    PrebuiltKeep \
+    PrebuiltNewsWeather \
+    SetupWizard \
+    Velvet \
+    Videos \
+    Wallet \
+    Wallpapers \
+    WebViewGoogle \
+    YouTube
 
 $(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
+
+# Google Assistant
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.opa.eligible_device=true
 
 # Extra tools in CM
 PRODUCT_PACKAGES += \
